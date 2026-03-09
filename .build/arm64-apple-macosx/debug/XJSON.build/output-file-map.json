@@ -1,0 +1,180 @@
+{
+  "": {
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/master.swiftdeps"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/App/AppDelegate.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppDelegate.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppDelegate.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppDelegate~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppDelegate.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppDelegate.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/App/JSONLensApp.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JSONLensApp.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JSONLensApp.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JSONLensApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JSONLensApp.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JSONLensApp.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/App/WindowCoordinator.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/WindowCoordinator.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/WindowCoordinator.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/WindowCoordinator~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/WindowCoordinator.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/WindowCoordinator.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Models/AppSettings.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppSettings.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppSettings.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppSettings~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppSettings.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppSettings.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Models/JsonNode.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonNode.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonNode.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonNode~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonNode.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonNode.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Models/TabSession.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSession.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSession.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSession~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSession.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSession.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Services/ClipboardMonitor.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardMonitor.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardMonitor.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardMonitor~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardMonitor.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardMonitor.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Services/EmbeddedJsonDetector.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/EmbeddedJsonDetector.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/EmbeddedJsonDetector.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/EmbeddedJsonDetector~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/EmbeddedJsonDetector.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/EmbeddedJsonDetector.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Services/JsonEditService.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonEditService.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonEditService.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonEditService~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonEditService.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonEditService.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Services/JsonParseService.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonParseService.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonParseService.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonParseService~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonParseService.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonParseService.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Services/JsonTreeBuilder.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeBuilder.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeBuilder.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeBuilder.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeBuilder.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Services/SettingsService.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsService.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsService.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsService~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsService.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsService.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/State/AppState.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppState.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppState.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppState~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppState.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppState.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/State/TabSessionManager.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSessionManager.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSessionManager.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSessionManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSessionManager.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSessionManager.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Views/Components/AppTypography.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppTypography.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppTypography.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppTypography~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppTypography.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppTypography.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Views/Components/ClipboardToastView.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardToastView.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardToastView.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardToastView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardToastView.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardToastView.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Views/Components/InspectorPanelView.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/InspectorPanelView.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/InspectorPanelView.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/InspectorPanelView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/InspectorPanelView.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/InspectorPanelView.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Views/Components/JsonTextEditorView.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTextEditorView.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTextEditorView.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTextEditorView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTextEditorView.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTextEditorView.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Views/Components/JsonTreeView.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeView.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeView.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeView.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeView.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Views/Components/StatusBarView.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/StatusBarView.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/StatusBarView.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/StatusBarView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/StatusBarView.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/StatusBarView.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Views/Components/TabBarView.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabBarView.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabBarView.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabBarView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabBarView.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabBarView.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Views/Components/ToolbarView.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ToolbarView.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ToolbarView.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ToolbarView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ToolbarView.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ToolbarView.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Views/MainWindowView.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/MainWindowView.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/MainWindowView.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/MainWindowView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/MainWindowView.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/MainWindowView.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/JSONLens/Views/Settings/SettingsView.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsView.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsView.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsView.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsView.dia"
+  },
+  "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/DerivedSources/resource_bundle_accessor.swift": {
+    "dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/resource_bundle_accessor.d",
+    "object": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/resource_bundle_accessor.dia"
+  }
+}
