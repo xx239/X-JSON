@@ -184,7 +184,7 @@ struct JsonTreeView: View {
                             commitKeyEdit(for: node.id)
                         }
                 } else if let key = node.key {
-                    Text(key)
+                    Text(formattedKeyText(key))
                         .font(AppTypography.monoFont(family: fontFamily, size: fontSize, weight: .medium))
                         .foregroundStyle(keyColor)
                         .onTapGesture(count: 2) {
@@ -196,16 +196,6 @@ struct JsonTreeView: View {
                         .foregroundStyle(.secondary)
                 }
 
-                Text(node.type.rawValue)
-                    .font(AppTypography.monoFont(family: fontFamily, size: max(10, fontSize - 2), weight: .semibold))
-                    .foregroundStyle(.secondary)
-                    .padding(.horizontal, 6)
-                    .padding(.vertical, 2)
-                    .background(
-                        RoundedRectangle(cornerRadius: 6)
-                            .fill(Color.primary.opacity(0.08))
-                    )
-
                 if valueEditing {
                     TextField("Value", text: $valueDraft)
                         .textFieldStyle(.roundedBorder)
@@ -216,7 +206,7 @@ struct JsonTreeView: View {
                             commitValueEdit(for: node.id)
                         }
                 } else {
-                    Text(node.displayValue)
+                    Text(formattedValueText(node))
                         .font(AppTypography.monoFont(family: fontFamily, size: fontSize))
                         .foregroundStyle(valueColor)
                         .lineLimit(1)
@@ -234,7 +224,7 @@ struct JsonTreeView: View {
                         .foregroundStyle(.secondary)
                 }
             }
-            .padding(.leading, CGFloat(row.depth) * 16)
+            .padding(.leading, CGFloat(row.depth) * 22)
         }
         .padding(.horizontal, 8)
         .padding(.vertical, 4)
@@ -372,6 +362,25 @@ struct JsonTreeView: View {
         case .null:
             return "null"
         }
+    }
+
+    private func formattedKeyText(_ key: String) -> String {
+        "\"\(escapeForInlineDisplay(key))\":"
+    }
+
+    private func formattedValueText(_ node: JsonNode) -> String {
+        switch node.rawValue {
+        case .string:
+            return "\"\(escapeForInlineDisplay(node.displayValue))\""
+        default:
+            return node.displayValue
+        }
+    }
+
+    private func escapeForInlineDisplay(_ text: String) -> String {
+        text
+            .replacingOccurrences(of: "\\", with: "\\\\")
+            .replacingOccurrences(of: "\"", with: "\\\"")
     }
 }
 

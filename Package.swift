@@ -7,7 +7,7 @@ let package = Package(
         .macOS(.v13)
     ],
     products: [
-        .executable(name: "XJSON", targets: ["XJSON"])
+        .executable(name: "X-JSON", targets: ["XJSON"])
     ],
     targets: [
         .executableTarget(

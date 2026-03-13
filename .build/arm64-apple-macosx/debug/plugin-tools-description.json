@@ -484,7 +484,7 @@
     }
   },
   "writeCommands" : {
-    "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON-entitlement.plist" : {
+    "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/X-JSON-entitlement.plist" : {
       "alwaysOutOfDate" : false,
       "inputs" : [
         {
@@ -496,7 +496,117 @@
           "name" : "<com.apple.security.get-task-allow>"
         }
       ],
-      "outputFilePath" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON-entitlement.plist"
+      "outputFilePath" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/X-JSON-entitlement.plist"
+    },
+    "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/X-JSON.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppDelegate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppSettings.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppTypography.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardMonitor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardToastView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/EmbeddedJsonDetector.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/InspectorPanelView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JSONLensApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonEditService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonNode.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonParseService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTextEditorView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeBuilder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/MainWindowView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/StatusBarView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabBarView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSession.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSessionManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ToolbarView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/WindowCoordinator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/resource_bundle_accessor.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/X-JSON.product/Objects.LinkFileList"
     },
     "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/sources" : {
       "alwaysOutOfDate" : false,
@@ -607,116 +717,6 @@
         }
       ],
       "outputFilePath" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/sources"
-    },
-    "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.product/Objects.LinkFileList" : {
-      "alwaysOutOfDate" : false,
-      "inputs" : [
-        {
-          "kind" : "virtual",
-          "name" : "<link-file-list>"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppDelegate.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppSettings.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppState.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/AppTypography.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardMonitor.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ClipboardToastView.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/EmbeddedJsonDetector.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/InspectorPanelView.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JSONLensApp.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonEditService.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonNode.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonParseService.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTextEditorView.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeBuilder.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/JsonTreeView.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/MainWindowView.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsService.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/SettingsView.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/StatusBarView.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabBarView.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSession.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/TabSessionManager.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/ToolbarView.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/WindowCoordinator.swift.o"
-        },
-        {
-          "kind" : "file",
-          "name" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.build/resource_bundle_accessor.swift.o"
-        }
-      ],
-      "outputFilePath" : "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/XJSON.product/Objects.LinkFileList"
     },
     "/Users/xuqi/Desktop/open source/X-JSON/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
       "alwaysOutOfDate" : true,

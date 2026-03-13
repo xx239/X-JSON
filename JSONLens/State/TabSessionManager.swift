@@ -157,9 +157,17 @@ final class TabSessionManager: ObservableObject {
             if !NSApp.sendAction(#selector(NSText.paste(_:)), to: nil, from: nil) {
                 pasteIntoSearchQuery()
             }
-        } else {
-            pasteAndParseFromPasteboard()
+            return
         }
+
+        if shouldPasteIntoTextEditor {
+            if !NSApp.sendAction(#selector(NSText.paste(_:)), to: nil, from: nil) {
+                setStatusForActive("Unable to paste into text editor")
+            }
+            return
+        }
+
+        pasteAndParseFromPasteboard()
     }
 
     func performMinifyAction() {
@@ -241,6 +249,12 @@ final class TabSessionManager: ObservableObject {
         tab.searchQuery += text
         tabs[index] = tab
         updateSearchQuery(tab.searchQuery)
+    }
+
+    private var shouldPasteIntoTextEditor: Bool {
+        guard activeTab?.mode == .text else { return false }
+        guard let responder = NSApp.keyWindow?.firstResponder else { return false }
+        return responder is NSTextView
     }
 
     private func toggleTreeExpansion() {
