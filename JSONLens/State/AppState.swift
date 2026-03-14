@@ -18,6 +18,7 @@ final class AppState: ObservableObject {
                 guard let self else { return }
                 self.clipboardMonitor.updateConfiguration(settings: latest)
                 self.tabManager.updateSettings(latest)
+                self.windowCoordinator.applyWindowBehavior(settings: latest)
             }
         }
     }
@@ -56,6 +57,7 @@ final class AppState: ObservableObject {
         installCallbacks()
         tabManager.updateSettings(settings)
         clipboardMonitor.updateConfiguration(settings: settings)
+        windowCoordinator.applyWindowBehavior(settings: settings)
     }
 
     func pasteAndParse() {
@@ -70,10 +72,24 @@ final class AppState: ObservableObject {
         toast = nil
     }
 
+    func applyWindowBehavior() {
+        windowCoordinator.applyWindowBehavior(settings: settings)
+    }
+
     private func installCallbacks() {
         clipboardMonitor.onJSONDetected = { [weak self] event in
             guard let self else { return }
-            self.tabManager.handleClipboardJSON(event.text, isForeground: event.wasAppActive)
+            let shouldBringToFront = !event.wasAppActive && self.settings.bringToFrontOnClipboardJSON
+            self.tabManager.handleClipboardJSON(
+                event.text,
+                isForeground: true
+            )
+
+            if shouldBringToFront {
+                self.windowCoordinator.activateMainWindow()
+                return
+            }
+
             if !event.wasAppActive {
                 let subtitle = self.settings.openDetectedJSONInNewTab
                     ? "A new tab has been prepared"

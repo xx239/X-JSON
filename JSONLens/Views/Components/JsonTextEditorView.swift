@@ -9,6 +9,7 @@ struct JsonTextEditorView: View {
     let selectedSearchMatchIndex: Int
     let fontFamily: AppFontFamily
     let fontSize: CGFloat
+    let surfaceOpacity: Double
     let onSyncToTree: () -> Void
 
     private var lineNumbers: String {
@@ -32,7 +33,7 @@ struct JsonTextEditorView: View {
                         .padding(.horizontal, 8)
                 }
                 .frame(width: 52)
-                .background(Color.white)
+                .background(Color.white.opacity(surfaceOpacity))
 
                 JsonCodeEditorTextView(
                     text: $text,
@@ -44,7 +45,7 @@ struct JsonTextEditorView: View {
                 )
                 .background(Color.clear)
             }
-            .background(Color.white)
+            .background(Color.white.opacity(surfaceOpacity))
 
             Divider().opacity(0.3)
 
@@ -82,7 +83,7 @@ struct JsonTextEditorView: View {
             }
             .padding(.horizontal, 12)
             .padding(.vertical, 8)
-            .background(Color.white)
+            .background(Color.white.opacity(surfaceOpacity))
         }
     }
 

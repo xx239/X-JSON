@@ -5,6 +5,7 @@ struct StatusBarView: View {
     let isDirty: Bool
     let mode: MainContentMode
     let tabCount: Int
+    let surfaceOpacity: Double
 
     var body: some View {
         HStack(spacing: 12) {
@@ -30,7 +31,7 @@ struct StatusBarView: View {
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 6)
-        .background(Color.white)
+        .background(Color.white.opacity(surfaceOpacity))
         .overlay(alignment: .top) {
             Divider().opacity(0.35)
         }

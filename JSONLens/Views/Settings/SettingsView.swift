@@ -31,6 +31,24 @@ struct SettingsView: View {
                     Stepper("", value: binding(\.editorFontSize), in: 10...22)
                     .labelsHidden()
                 }
+
+                HStack {
+                    Text("Background opacity")
+                    Spacer()
+                    Text("\(appState.settings.backgroundOpacityPercent)%")
+                        .foregroundStyle(.secondary)
+                        .frame(width: 56, alignment: .trailing)
+                    Slider(value: backgroundOpacityBinding, in: 35...100, step: 5)
+                        .frame(width: 180)
+                }
+            }
+
+            Section("Window") {
+                Toggle("Always keep window on top", isOn: binding(\.alwaysOnTop))
+                Toggle(
+                    "Bring app to front when clipboard JSON is detected",
+                    isOn: binding(\.bringToFrontOnClipboardJSON)
+                )
             }
 
             Section("Clipboard") {
@@ -88,6 +106,16 @@ struct SettingsView: View {
             get: { appState.settings.openDetectedJSONInNewTab ? .createNewTab : .overwriteCurrentTab },
             set: { behavior in
                 appState.settings.openDetectedJSONInNewTab = (behavior == .createNewTab)
+            }
+        )
+    }
+
+    private var backgroundOpacityBinding: Binding<Double> {
+        Binding(
+            get: { Double(appState.settings.backgroundOpacityPercent) },
+            set: { newValue in
+                let rounded = Int((newValue / 5).rounded() * 5)
+                appState.settings.backgroundOpacityPercent = min(max(rounded, 35), 100)
             }
         )
     }

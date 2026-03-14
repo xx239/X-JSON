@@ -130,6 +130,9 @@ struct AppSettings: Codable, Equatable {
     var appearanceTheme: AppAppearanceTheme = .plumGreen
     var editorFontFamily: AppFontFamily = .systemMonospaced
     var editorFontSize: Int = 12
+    var backgroundOpacityPercent: Int = 100
+    var alwaysOnTop: Bool = false
+    var bringToFrontOnClipboardJSON: Bool = false
     var enableClipboardMonitoring: Bool = true
     var autoParseClipboardJSON: Bool = true
     var openDetectedJSONInNewTab: Bool = true
@@ -138,11 +141,18 @@ struct AppSettings: Codable, Equatable {
     var doubleClickToEdit: Bool = true
     var confirmBeforeDelete: Bool = false
 
+    var backgroundOpacity: Double {
+        Double(min(max(backgroundOpacityPercent, 35), 100)) / 100.0
+    }
+
     private enum CodingKeys: String, CodingKey {
         case launchWithDefaultWindow
         case appearanceTheme
         case editorFontFamily
         case editorFontSize
+        case backgroundOpacityPercent
+        case alwaysOnTop
+        case bringToFrontOnClipboardJSON
         case enableClipboardMonitoring
         case autoParseClipboardJSON
         case openDetectedJSONInNewTab
@@ -160,6 +170,10 @@ struct AppSettings: Codable, Equatable {
         appearanceTheme = try container.decodeIfPresent(AppAppearanceTheme.self, forKey: .appearanceTheme) ?? .plumGreen
         editorFontFamily = try container.decodeIfPresent(AppFontFamily.self, forKey: .editorFontFamily) ?? .systemMonospaced
         editorFontSize = try container.decodeIfPresent(Int.self, forKey: .editorFontSize) ?? 12
+        backgroundOpacityPercent = try container.decodeIfPresent(Int.self, forKey: .backgroundOpacityPercent) ?? 100
+        backgroundOpacityPercent = min(max(backgroundOpacityPercent, 35), 100)
+        alwaysOnTop = try container.decodeIfPresent(Bool.self, forKey: .alwaysOnTop) ?? false
+        bringToFrontOnClipboardJSON = try container.decodeIfPresent(Bool.self, forKey: .bringToFrontOnClipboardJSON) ?? false
         enableClipboardMonitoring = try container.decodeIfPresent(Bool.self, forKey: .enableClipboardMonitoring) ?? true
         autoParseClipboardJSON = try container.decodeIfPresent(Bool.self, forKey: .autoParseClipboardJSON) ?? true
         openDetectedJSONInNewTab = try container.decodeIfPresent(Bool.self, forKey: .openDetectedJSONInNewTab) ?? true
@@ -175,6 +189,9 @@ struct AppSettings: Codable, Equatable {
         try container.encode(appearanceTheme, forKey: .appearanceTheme)
         try container.encode(editorFontFamily, forKey: .editorFontFamily)
         try container.encode(editorFontSize, forKey: .editorFontSize)
+        try container.encode(min(max(backgroundOpacityPercent, 35), 100), forKey: .backgroundOpacityPercent)
+        try container.encode(alwaysOnTop, forKey: .alwaysOnTop)
+        try container.encode(bringToFrontOnClipboardJSON, forKey: .bringToFrontOnClipboardJSON)
         try container.encode(enableClipboardMonitoring, forKey: .enableClipboardMonitoring)
         try container.encode(autoParseClipboardJSON, forKey: .autoParseClipboardJSON)
         try container.encode(openDetectedJSONInNewTab, forKey: .openDetectedJSONInNewTab)

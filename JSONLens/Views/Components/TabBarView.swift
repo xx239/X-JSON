@@ -9,6 +9,7 @@ struct TabBarView: View {
     let onNew: () -> Void
     let onRename: (UUID, String) -> Void
     let allowDoubleClickRename: Bool
+    let surfaceOpacity: Double
 
     @State private var editingTabID: UUID?
     @State private var renameDraft: String = ""
@@ -38,7 +39,7 @@ struct TabBarView: View {
             .help("New Tab")
         }
         .frame(height: 34)
-        .background(Color.white)
+        .background(Color.white.opacity(surfaceOpacity))
         .overlay(alignment: .bottom) {
             Divider().opacity(0.5)
         }
@@ -120,12 +121,12 @@ struct TabBarView: View {
         .background(
             ZStack(alignment: .top) {
                 if isActive {
-                    Color.white
+                    Color.white.opacity(surfaceOpacity)
                     Rectangle()
                         .fill(Color.accentColor.opacity(0.9))
                         .frame(height: 2)
                 } else {
-                    Color.white
+                    Color.white.opacity(surfaceOpacity)
                 }
             }
         )

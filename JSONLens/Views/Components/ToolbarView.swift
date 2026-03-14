@@ -10,6 +10,7 @@ struct ToolbarView: View {
     let onTreeMode: () -> Void
     let onTextMode: () -> Void
     let onOpenSettingsFallback: () -> Void
+    let surfaceOpacity: Double
 
     var body: some View {
         HStack(spacing: 10) {
@@ -46,7 +47,7 @@ struct ToolbarView: View {
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 8)
-        .background(Color.white)
+        .background(Color.white.opacity(surfaceOpacity))
         .overlay(alignment: .bottom) {
             Divider().opacity(0.35)
         }

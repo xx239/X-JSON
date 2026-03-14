@@ -19,6 +19,7 @@ private struct MainWindowContentView: View {
 
     private var activeTab: TabSession? { manager.activeTab }
     private var editorFontSize: CGFloat { CGFloat(appState.settings.editorFontSize) }
+    private var surfaceOpacity: Double { appState.settings.backgroundOpacity }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -29,7 +30,8 @@ private struct MainWindowContentView: View {
                 onClose: manager.closeTab,
                 onNew: { manager.newTab(select: true) },
                 onRename: manager.renameTab,
-                allowDoubleClickRename: appState.settings.doubleClickToEdit
+                allowDoubleClickRename: appState.settings.doubleClickToEdit,
+                surfaceOpacity: surfaceOpacity
             )
 
             ToolbarView(
@@ -41,7 +43,8 @@ private struct MainWindowContentView: View {
                 onToggleInspector: { isInspectorVisible.toggle() },
                 onTreeMode: { manager.setMode(.tree) },
                 onTextMode: { manager.setMode(.text) },
-                onOpenSettingsFallback: appState.showSettingsWindowLegacy
+                onOpenSettingsFallback: appState.showSettingsWindowLegacy,
+                surfaceOpacity: surfaceOpacity
             )
 
             if manager.isSearchBarVisible {
@@ -54,10 +57,11 @@ private struct MainWindowContentView: View {
                 status: activeTab?.statusText ?? "Ready",
                 isDirty: activeTab?.isDirty ?? false,
                 mode: activeTab?.mode ?? .tree,
-                tabCount: manager.tabs.count
+                tabCount: manager.tabs.count,
+                surfaceOpacity: surfaceOpacity
             )
         }
-        .background(Color.white)
+        .background(Color.white.opacity(surfaceOpacity))
         .overlay(alignment: .topTrailing) {
             if let toast = appState.toast {
                 ClipboardToastView(toast: toast) {
@@ -88,6 +92,9 @@ private struct MainWindowContentView: View {
         }
         .onChange(of: isSearchFieldFocused) { focused in
             manager.setSearchFieldFocused(focused)
+        }
+        .onAppear {
+            appState.applyWindowBehavior()
         }
     }
 
@@ -152,12 +159,13 @@ private struct MainWindowContentView: View {
                     selectedSearchMatchIndex: manager.activeTextSearchCurrentIndex,
                     fontFamily: appState.settings.editorFontFamily,
                     fontSize: editorFontSize,
+                    surfaceOpacity: surfaceOpacity,
                     onSyncToTree: manager.syncTextToTree
                 )
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white)
+        .background(Color.white.opacity(surfaceOpacity))
     }
 
     private var inspectorPane: some View {
@@ -174,7 +182,8 @@ private struct MainWindowContentView: View {
             },
             onAddSibling: manager.addSiblingForSelectedNode,
             onAddChild: manager.addChildForSelectedNode,
-            onDelete: manager.deleteSelectedNode
+            onDelete: manager.deleteSelectedNode,
+            surfaceOpacity: surfaceOpacity
         )
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
@@ -251,7 +260,7 @@ private struct MainWindowContentView: View {
         }
         .padding(.horizontal, 12)
         .padding(.vertical, 7)
-        .background(Color.white)
+        .background(Color.white.opacity(surfaceOpacity))
         .overlay(alignment: .bottom) {
             Divider().opacity(0.35)
         }

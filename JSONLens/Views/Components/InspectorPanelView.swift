@@ -8,6 +8,7 @@ struct InspectorPanelView: View {
     let onAddSibling: () -> Void
     let onAddChild: () -> Void
     let onDelete: () -> Void
+    let surfaceOpacity: Double
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
@@ -34,7 +35,7 @@ struct InspectorPanelView: View {
             Spacer()
         }
         .padding(14)
-        .background(Color.white)
+        .background(Color.white.opacity(surfaceOpacity))
         .textSelection(.enabled)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
