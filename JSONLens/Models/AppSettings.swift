@@ -19,7 +19,7 @@ enum AppAppearanceTheme: String, Codable, CaseIterable, Equatable {
     var treeKeyHexColor: String {
         switch self {
         case .plumGreen:
-            return "#7e0f7c"
+            return "#80217D"
         case .oceanAmber:
             return "#1f4ba5"
         case .slateCoral:
@@ -27,14 +27,47 @@ enum AppAppearanceTheme: String, Codable, CaseIterable, Equatable {
         }
     }
 
-    var treeValueHexColor: String {
+    var treeStringHexColor: String {
         switch self {
         case .plumGreen:
-            return "#32aa3a"
+            return "#3AB54A"
         case .oceanAmber:
             return "#a16207"
         case .slateCoral:
             return "#b4534d"
+        }
+    }
+
+    var treeBooleanHexColor: String {
+        switch self {
+        case .plumGreen:
+            return "#F98280"
+        case .oceanAmber:
+            return "#C2410C"
+        case .slateCoral:
+            return "#EF4444"
+        }
+    }
+
+    var treeNumberHexColor: String {
+        switch self {
+        case .plumGreen:
+            return "#25AAE2"
+        case .oceanAmber:
+            return "#0369A1"
+        case .slateCoral:
+            return "#0EA5E9"
+        }
+    }
+
+    var treeNullHexColor: String {
+        switch self {
+        case .plumGreen:
+            return "#F1592A"
+        case .oceanAmber:
+            return "#BE123C"
+        case .slateCoral:
+            return "#F97316"
         }
     }
 }

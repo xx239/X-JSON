@@ -7,7 +7,10 @@ struct JsonTreeView: View {
     let expandedNodeIDs: Set<String>
     let matchedNodeIDs: Set<String>
     let keyColor: Color
-    let valueColor: Color
+    let stringValueColor: Color
+    let booleanValueColor: Color
+    let numberValueColor: Color
+    let nullValueColor: Color
     let fontFamily: AppFontFamily
     let fontSize: CGFloat
     let onSelectionChange: (String?) -> Void
@@ -208,7 +211,7 @@ struct JsonTreeView: View {
                 } else {
                     Text(formattedValueText(node))
                         .font(AppTypography.monoFont(family: fontFamily, size: fontSize))
-                        .foregroundStyle(valueColor)
+                        .foregroundStyle(valueColor(for: node))
                         .lineLimit(1)
                         .truncationMode(.tail)
                         .onTapGesture(count: 2) {
@@ -365,7 +368,10 @@ struct JsonTreeView: View {
     }
 
     private func formattedKeyText(_ key: String) -> String {
-        "\"\(escapeForInlineDisplay(key))\":"
+        if isArrayIndexKey(key) {
+            return "\(key):"
+        }
+        return "\"\(escapeForInlineDisplay(key))\":"
     }
 
     private func formattedValueText(_ node: JsonNode) -> String {
@@ -377,10 +383,31 @@ struct JsonTreeView: View {
         }
     }
 
+    private func valueColor(for node: JsonNode) -> Color {
+        switch node.type {
+        case .string:
+            return stringValueColor
+        case .boolean:
+            return booleanValueColor
+        case .number:
+            return numberValueColor
+        case .null:
+            return nullValueColor
+        case .object, .array:
+            return .secondary
+        }
+    }
+
     private func escapeForInlineDisplay(_ text: String) -> String {
         text
             .replacingOccurrences(of: "\\", with: "\\\\")
             .replacingOccurrences(of: "\"", with: "\\\"")
+    }
+
+    private func isArrayIndexKey(_ key: String) -> Bool {
+        guard key.first == "[", key.last == "]" else { return false }
+        let inner = key.dropFirst().dropLast()
+        return !inner.isEmpty && inner.allSatisfy(\.isNumber)
     }
 }
 

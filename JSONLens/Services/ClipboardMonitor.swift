@@ -68,6 +68,10 @@ final class ClipboardMonitor {
         guard fingerprint != lastFingerprint else { return }
         lastFingerprint = fingerprint
 
+        if shouldIgnoreClipboardChangeFromFocusedTextEditor() {
+            return
+        }
+
         guard text.lengthOfBytes(using: .utf8) <= maxSizeBytes else { return }
 
         switch parser.parse(text: text) {
@@ -79,5 +83,11 @@ final class ClipboardMonitor {
         case .failure:
             break
         }
+    }
+
+    private func shouldIgnoreClipboardChangeFromFocusedTextEditor() -> Bool {
+        guard NSApp.isActive else { return false }
+        guard let responder = NSApp.keyWindow?.firstResponder else { return false }
+        return responder is NSTextView
     }
 }

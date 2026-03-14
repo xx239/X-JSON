@@ -48,24 +48,36 @@ struct JsonTextEditorView: View {
 
             Divider().opacity(0.3)
 
-            HStack {
-                Button("Sync to Tree") {
-                    onSyncToTree()
+            VStack(alignment: .leading, spacing: 6) {
+                HStack {
+                    Button("Sync to Tree") {
+                        onSyncToTree()
+                    }
+                    .buttonStyle(.plain)
+                    .font(AppTypography.monoFont(family: fontFamily, size: fontSize, weight: .semibold))
+
+                    Spacer()
+
+                    Text("Lines: \(visibleLineCount)")
+                        .font(AppTypography.monoFont(family: fontFamily, size: max(10, fontSize - 1)))
+                        .foregroundStyle(.secondary)
                 }
-                .buttonStyle(.plain)
-                .font(AppTypography.monoFont(family: fontFamily, size: fontSize, weight: .semibold))
-
-                Spacer()
-
-                Text("Lines: \(visibleLineCount)")
-                    .font(AppTypography.monoFont(family: fontFamily, size: max(10, fontSize - 1)))
-                    .foregroundStyle(.secondary)
 
                 if let parseError {
-                    Text(parseError.message)
-                        .font(AppTypography.monoFont(family: fontFamily, size: max(10, fontSize - 1)))
-                        .foregroundStyle(.red)
-                        .textSelection(.enabled)
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(parseError.message)
+                            .font(AppTypography.monoFont(family: fontFamily, size: max(10, fontSize - 1), weight: .semibold))
+                            .foregroundStyle(.red)
+                            .textSelection(.enabled)
+
+                        if let context = parseError.contextDisplay {
+                            Text(context)
+                                .font(AppTypography.monoFont(family: fontFamily, size: max(10, fontSize - 1)))
+                                .foregroundStyle(.red.opacity(0.9))
+                                .textSelection(.enabled)
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
             .padding(.horizontal, 12)

@@ -1,3 +1,4 @@
+import AppKit
 import SwiftUI
 
 struct TabBarView: View {
@@ -25,7 +26,10 @@ struct TabBarView: View {
 
             Divider().opacity(0.45)
 
-            Button(action: onNew) {
+            Button {
+                finishRenameIfNeeded()
+                onNew()
+            } label: {
                 Image(systemName: "plus")
                     .font(.system(size: 11, weight: .semibold))
                     .frame(width: 28, height: 28)
@@ -46,6 +50,12 @@ struct TabBarView: View {
                 }
             }
         }
+        .onReceive(NotificationCenter.default.publisher(for: NSApplication.didResignActiveNotification)) { _ in
+            finishRenameIfNeeded()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: NSWindow.didResignKeyNotification)) { _ in
+            finishRenameIfNeeded()
+        }
     }
 
     @ViewBuilder
@@ -64,6 +74,7 @@ struct TabBarView: View {
                     }
             } else {
                 Button {
+                    finishRenameIfNeeded(excluding: tab.id)
                     onSelect(tab.id)
                 } label: {
                     Text(tab.title)
@@ -76,6 +87,7 @@ struct TabBarView: View {
                 .simultaneousGesture(
                     TapGesture(count: 2).onEnded {
                         guard allowDoubleClickRename else { return }
+                        finishRenameIfNeeded(excluding: tab.id)
                         onSelect(tab.id)
                         editingTabID = tab.id
                         renameDraft = tab.title
@@ -93,6 +105,7 @@ struct TabBarView: View {
             }
 
             Button {
+                finishRenameIfNeeded()
                 onClose(tab.id)
             } label: {
                 Image(systemName: "xmark")
@@ -125,5 +138,15 @@ struct TabBarView: View {
         onRename(tabID, renameDraft)
         editingTabID = nil
         focusedRenameTabID = nil
+    }
+
+    private func finishRenameIfNeeded() {
+        guard let editingTabID else { return }
+        finishRename(tabID: editingTabID)
+    }
+
+    private func finishRenameIfNeeded(excluding tabID: UUID) {
+        guard let editingTabID, editingTabID != tabID else { return }
+        finishRename(tabID: editingTabID)
     }
 }

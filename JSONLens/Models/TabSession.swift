@@ -9,9 +9,17 @@ struct JsonParseError: Error, Equatable {
     var reason: String
     var line: Int
     var column: Int
+    var contextLine: String? = nil
+    var caretColumn: Int? = nil
 
     var message: String {
         "\(reason) (line \(line), column \(column))"
+    }
+
+    var contextDisplay: String? {
+        guard let contextLine, let caretColumn else { return nil }
+        let safeColumn = max(1, min(caretColumn, contextLine.count + 1))
+        return "\(contextLine)\n" + String(repeating: " ", count: safeColumn - 1) + "^"
     }
 }
 

@@ -153,6 +153,11 @@ final class TabSessionManager: ObservableObject {
     }
 
     func pasteFromCommandShortcut() {
+        if shouldReuseCurrentEmptyTab {
+            pasteAndParseFromPasteboard()
+            return
+        }
+
         if isSearchFieldFocused, isSearchBarVisible {
             if !NSApp.sendAction(#selector(NSText.paste(_:)), to: nil, from: nil) {
                 pasteIntoSearchQuery()
@@ -252,7 +257,9 @@ final class TabSessionManager: ObservableObject {
     }
 
     private var shouldPasteIntoTextEditor: Bool {
-        guard activeTab?.mode == .text else { return false }
+        guard let tab = activeTab, tab.mode == .text else { return false }
+        let hasContent = !tab.rawText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || tab.rootValue != nil
+        guard hasContent else { return false }
         guard let responder = NSApp.keyWindow?.firstResponder else { return false }
         return responder is NSTextView
     }
@@ -297,15 +304,21 @@ final class TabSessionManager: ObservableObject {
     }
 
     func handleClipboardJSON(_ text: String, isForeground: Bool) {
+        let clipboardTitle = nextClipboardTabTitle()
         let targetTabID: UUID
         if settings.openDetectedJSONInNewTab {
-            targetTabID = createTabForIncomingJSON(preferredTitle: nextClipboardTabTitle())
+            targetTabID = createTabForIncomingJSON(preferredTitle: clipboardTitle)
         } else if let activeTabID {
             targetTabID = activeTabID
         } else {
-            targetTabID = createTabForIncomingJSON(preferredTitle: nextClipboardTabTitle())
+            targetTabID = createTabForIncomingJSON(preferredTitle: clipboardTitle)
         }
-        parseAndAttach(text: text, tabID: targetTabID, shouldSelect: isForeground)
+        parseAndAttach(
+            text: text,
+            tabID: targetTabID,
+            shouldSelect: isForeground,
+            forcedTitle: clipboardTitle
+        )
     }
 
     func pasteAndParseFromPasteboard() {
@@ -314,12 +327,13 @@ final class TabSessionManager: ObservableObject {
             return
         }
 
-        if shouldReuseCurrentEmptyTab {
-            parseAndAttach(text: text, tabID: activeTabID, shouldSelect: true)
+        let targetTabID: UUID
+        if shouldReuseCurrentEmptyTab, let activeTabID {
+            targetTabID = activeTabID
         } else {
-            let id = createTabForIncomingJSON(preferredTitle: "Pasted")
-            parseAndAttach(text: text, tabID: id, shouldSelect: true)
+            targetTabID = createTabForIncomingJSON(preferredTitle: "Pasted")
         }
+        parseAndAttach(text: text, tabID: targetTabID, shouldSelect: true)
     }
 
     func updateRawText(_ text: String) {
@@ -615,13 +629,10 @@ final class TabSessionManager: ObservableObject {
     }
 
     private func nextClipboardTabTitle() -> String {
-        let prefix = "Clipboard_"
         let highestIndex = tabs.compactMap { tab -> Int? in
-            guard tab.title.hasPrefix(prefix) else { return nil }
-            let suffix = String(tab.title.dropFirst(prefix.count))
-            return Int(suffix)
+            Self.clipboardIndex(from: tab.title)
         }.max() ?? 0
-        return "\(prefix)\(highestIndex + 1)"
+        return "clipboard-\(highestIndex + 1)"
     }
 
     @discardableResult
@@ -631,10 +642,13 @@ final class TabSessionManager: ObservableObject {
         return tab.id
     }
 
-    private func parseAndAttach(text: String, tabID: UUID?, shouldSelect: Bool) {
+    private func parseAndAttach(text: String, tabID: UUID?, shouldSelect: Bool, forcedTitle: String? = nil) {
         guard let tabID, let index = tabs.firstIndex(where: { $0.id == tabID }) else { return }
 
         var tab = tabs[index]
+        if let forcedTitle {
+            tab.title = forcedTitle
+        }
         tab.rawText = text
         tab.isDirty = false
         tab.isTextMinified = false
@@ -649,7 +663,9 @@ final class TabSessionManager: ObservableObject {
             tab.rootValue = root
             tab.parseError = nil
             tab.mode = .tree
-            tab.title = titleFrom(root: root, fallback: tab.title)
+            if forcedTitle == nil {
+                tab.title = titleFrom(root: root, fallback: tab.title)
+            }
             if let formatted = try? parser.stringify(value: root, pretty: true) {
                 tab.rawText = formatted
             }
@@ -952,6 +968,19 @@ final class TabSessionManager: ObservableObject {
         }
 
         return result
+    }
+
+    private static func clipboardIndex(from title: String) -> Int? {
+        let normalized = title.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        if normalized.hasPrefix("clipboard-") {
+            let suffix = String(normalized.dropFirst("clipboard-".count))
+            return Int(suffix)
+        }
+        if normalized.hasPrefix("clipboard_") {
+            let suffix = String(normalized.dropFirst("clipboard_".count))
+            return Int(suffix)
+        }
+        return nil
     }
 
     private func clearSearchStateForActiveTab(clearTreeSelection: Bool) {
