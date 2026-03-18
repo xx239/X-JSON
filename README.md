@@ -2,11 +2,11 @@
 
 X-JSON 是一个基于 **SwiftUI + AppKit** 的 macOS 原生 JSON 工具，面向开发者，主打本地解析、结构化编辑、低噪音界面与高效率键盘交互。
 
-[![Download DMG](https://github.com/xx239/X-JSON/releases/tag/pre)
+[![Download DMG](https://img.shields.io/badge/Download-macOS%20DMG-black?logo=apple)](https://github.com/xx239/X-JSON/releases/tag/pre)
 
 ## 下载
 
-- macOS (DMG, 最新版): [X-JSON-macOS.dmg](https://github.com/xx239/X-JSON/releases/tag/pre)
+- macOS (DMG): [X-JSON-macOS.dmg](https://github.com/xx239/X-JSON/releases/tag/pre)
 
 ## 为什么是 X-JSON
 
